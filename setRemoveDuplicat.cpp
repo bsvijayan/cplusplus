@@ -21,3 +21,6 @@ int main()
     }
     
 }
+//Answer output//
+//Set removes the duplicate elements and it will be ordered
+1 3 4 5 6 21 31 
