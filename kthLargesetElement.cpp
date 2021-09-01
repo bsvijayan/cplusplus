@@ -18,3 +18,5 @@ int main()
    //Print largest element in the std::queue
    //It's heap
 }
+//output
+//52
