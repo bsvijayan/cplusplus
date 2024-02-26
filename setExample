@@ -1,0 +1,29 @@
+//Set example
+//Set insert when duplicate will return pair<int,bool>
+//set.insert
+//set.size()
+
+#include <stdio.h>
+#include<set>
+#include<iostream>
+int main()
+{
+    std::set<int>mySet;
+    mySet.insert(10);
+    mySet.insert(20);
+    
+    if(mySet.insert(10).second!=true)
+    {
+        
+       std::cout<<"Inserting duplicates"; 
+       
+    }
+    for(auto iter=mySet.begin();iter!=mySet.end();iter++)
+    {
+        std::cout<<*iter<<std::endl;
+    }
+    std::cout<<"Size of myset : "<<mySet.size()<<std::endl;
+    
+
+    return 0;
+}
