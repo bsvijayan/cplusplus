@@ -14,13 +14,13 @@ bool compareUsers(const user& u1, const user& u2) {
     return u1.user_id < u2.user_id;
 }
 int main() {
-    // Example data sizes
-    const int nlou = 100000;  // Number of users
-    const int nloo = 100000;  // Number of orders
+     
+    const int nlou = 100000;   
+    const int nloo = 100000;   
 
-    // Example data arrays (assuming pre-filled or initialized)
-    user lou[nlou];  // Array of users
-    order loo[nloo]; // Array of orders
+     
+    user lou[nlou];  
+    order loo[nloo];  
 
     // Example initialization (filling with sample data)
     for (int i = 0; i < nlou; ++i) {
