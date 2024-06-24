@@ -26,23 +26,24 @@ int main() {
     }
 
     for (int i = 0; i < nloo; ++i) {
-        loo[i] = { i + 1, (i % nlou) + 1, 100.0 };  // Assign user_id based on modulo to ensure valid user_id
+        loo[i] = { i + 1, (i % nlou) + 1, 100.0 };  // Assign user_id based on modulo
     }
 
     // Start the two-pointer matching process
     int user_index = 0;
     int order_index = 0;
-auto start = std::chrono::high_resolution_clock::now();
+    auto start = std::chrono::high_resolution_clock::now();
+    // user_index and order_index and traversed.
     while (user_index < nlou && order_index < nloo) {
         if (lou[user_index].user_id == loo[order_index].user_id) {
             // Match found: Print user name and order amount
            // std::cout << "User Name: " << lou[user_index].name << ", Order Amount: " << loo[order_index].amount << std::endl;
-            ++order_index;  // Move order_index forward
+            ++order_index; 
         }
-        ++user_index;  // Always move user_index forward
+        ++user_index;  
     }
     auto end = std::chrono::high_resolution_clock::now();
-     std::chrono::duration<double> duration = end - start;
+    std::chrono::duration<double> duration = end - start;
     std::cout << "Time taken: " << duration.count() << " seconds" << std::endl;
 
     return 0;
