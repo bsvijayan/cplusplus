@@ -10,7 +10,9 @@ struct order {
     int user_id;
     double amount;
 };
-
+bool compareUsers(const user& u1, const user& u2) {
+    return u1.user_id < u2.user_id;
+}
 int main() {
     // Example data sizes
     const int nlou = 100000;  // Number of users
@@ -28,7 +30,12 @@ int main() {
     for (int i = 0; i < nloo; ++i) {
         loo[i] = { i + 1, (i % nlou) + 1, 100.0 };  // Assign user_id based on modulo
     }
+     std::sort(lou, lou + nlou, compareUsers);
+     
 
+std::sort(loo, loo + nloo, [](const order& o1, const order& o2) {
+        return o1.user_id < o2.user_id;
+    });
     // Start the two-pointer matching process
     int user_index = 0;
     int order_index = 0;
@@ -48,5 +55,4 @@ int main() {
 
     return 0;
 }
-
 
